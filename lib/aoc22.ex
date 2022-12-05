@@ -12,7 +12,15 @@ defmodule Aoc22 do
       :world
 
   """
-  def hello do
-    :world
+
+  def read_input(name) do
+    File.read!("./input/#{name}")
+  end
+
+
+  def day1_1 do
+    read_input("day1")
+    |> Aoc22.Day1.one()
+    |> IO.inspect()
   end
 end

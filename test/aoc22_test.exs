@@ -2,8 +2,7 @@ defmodule Aoc22Test do
   use ExUnit.Case
 
   def readTestInput(name) do
-    {:ok, content} = File.read("./test/fixtures/#{name}")
-    content
+    File.read!("./test/fixtures/#{name}")
   end
 
   test "day 1 part 1" do
