@@ -21,4 +21,22 @@ defmodule Aoc22.Day1 do
 
     globalMax
   end
+
+  def aggregateLists("", acc) do
+    [0 | acc]
+  end
+  def aggregateLists(current, [acc | rest]) do
+    {currentNumber, _remainder} = Integer.parse((current))
+    [acc + currentNumber | rest]
+  end
+
+
+  def two (input) do
+    input
+    |> String.split("\n")
+    |> Enum.reduce([0], &aggregateLists/2 )
+    |> Enum.sort()
+    |> Enum.slice(-3..-1)
+    |> Enum.reduce(fn a, b -> a + b end)
+  end
 end
