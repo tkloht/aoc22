@@ -55,4 +55,16 @@ defmodule Aoc22 do
     |> Aoc22.Day3.two()
     |> IO.inspect()
   end
+
+  def day4_1 do
+    read_input("day4")
+    |> Aoc22.Day4.one()
+    |> IO.inspect()
+  end
+
+  def day4_2 do
+    read_input("day4")
+    |> Aoc22.Day4.two()
+    |> IO.inspect()
+  end
 end
