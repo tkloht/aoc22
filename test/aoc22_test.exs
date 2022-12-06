@@ -25,4 +25,14 @@ defmodule Aoc22Test do
     assert Aoc22.Day2.two(input) == 12
   end
 
+  test "day 3 part 1" do
+    input = readTestInput("day3")
+    assert Aoc22.Day3.one(input) == 157
+  end
+
+  test "day 3 part 2" do
+    input = readTestInput("day3")
+    assert Aoc22.Day3.two(input) == 70
+  end
+
 end
